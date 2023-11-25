@@ -1,4 +1,5 @@
-FROM alpine:3.17
-RUN apk update && apk upgrade && apk add --no-cache nginx
+FROM debian:11.8
+RUN apt-get update && \
+    apt-get install -y nginx
 EXPOSE 443
 CMD ["nginx", "-g", "daemon off;"]
