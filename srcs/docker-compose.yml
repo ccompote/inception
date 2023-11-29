@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 
 services:
   nginx:
@@ -55,21 +55,16 @@ services:
 
 volumes:
   wp-volume:
-    driver: local
     driver_opts:
       o: bind
       type: none
-      # device: /home/${USER}/data/wordpress
-      device: ${HOME}/data/wp-volume
+      device: /home/${USER}/data/wordpress
 
   db-volume:
-    driver: local
     driver_opts:
       o: bind
       type: none
-      #device: /home/${USER}/data/mariadb
-      device: ${HOME}/data/db-volume
-
+      device: /home/${USER}/data/mariadb
 
 networks:
     inception:
