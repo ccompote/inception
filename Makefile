@@ -2,7 +2,7 @@ name = Inception
 
 all:
 	@printf "Launching configuration ${name}...\n"
-	@docker-compose -f ./srcs/docker-compose.yml up -d
+	@docker-compose -f ./srcs/docker-compose.yml up -d --build
 
 build:
 	@printf "Building configuration ${name}...\n"
